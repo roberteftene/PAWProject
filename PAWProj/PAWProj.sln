@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.852
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PAWProj", "PAWProj\PAWProj.csproj", "{69906B16-B2B9-4408-A95D-199866C4A16A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{69906B16-B2B9-4408-A95D-199866C4A16A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69906B16-B2B9-4408-A95D-199866C4A16A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69906B16-B2B9-4408-A95D-199866C4A16A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69906B16-B2B9-4408-A95D-199866C4A16A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5E41863A-00B4-4A37-83A8-9A6E32CA000E}
+	EndGlobalSection
+EndGlobal
