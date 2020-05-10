@@ -24,7 +24,22 @@ namespace PAWProj
 
         private void placeOrderBtn_Click(object sender, EventArgs e)
         {
+            orderInputP.Show();
+        }
 
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void orderForm_Load(object sender, EventArgs e)
+        {
+            orderInputP.Hide();
         }
     }
 }
