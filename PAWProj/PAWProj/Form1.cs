@@ -16,6 +16,8 @@ namespace PAWProj
         {
           
             InitializeComponent();
+            clientlogin_usercontrol1.Hide();
+            employee_usercontrol1.Hide();
           
         }
 
@@ -51,6 +53,39 @@ namespace PAWProj
         private void employee_usercontrol1_Load(object sender, EventArgs e)
         {
             employee_usercontrol1.Hide();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_minimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btn_maximize_Click(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Normal)
+                this.WindowState = FormWindowState.Maximized;
+            else
+                this.WindowState = FormWindowState.Normal;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void employee_usercontrol1_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

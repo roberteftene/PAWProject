@@ -60,6 +60,7 @@
             this.getOrdersButton.TabIndex = 5;
             this.getOrdersButton.Text = "Orders";
             this.getOrdersButton.UseVisualStyleBackColor = true;
+            this.getOrdersButton.Click += new System.EventHandler(this.getOrdersButton_Click);
             // 
             // label1
             // 
