@@ -35,7 +35,10 @@ namespace PAWProj
 
         private void getOrdersButton_Click(object sender, EventArgs e)
         {
-
+            orderForm newForm = new orderForm() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            //newForm.FormBorderStyle = { FormBorderStyle}cbo
+            this.pContainer.Controls.Add(newForm);
+            newForm.Show();
         }
 
         private void time_Click(object sender, EventArgs e)
@@ -74,6 +77,11 @@ namespace PAWProj
         private void button2_Click_1(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void reviewBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
