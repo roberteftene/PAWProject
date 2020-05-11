@@ -28,43 +28,166 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(orderForm));
-            this.menuBtn = new System.Windows.Forms.Button();
-            this.placeOrderBtn = new System.Windows.Forms.Button();
             this.orderInputP = new System.Windows.Forms.Panel();
-            this.submitOrderBtn = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.foodChoice = new System.Windows.Forms.TextBox();
+            this.drinkChoice = new System.Windows.Forms.ComboBox();
+            this.textBox12 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.menuChoice = new System.Windows.Forms.ComboBox();
+            this.address = new System.Windows.Forms.TextBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.discount = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.submitOrderBtn = new System.Windows.Forms.Button();
+            this.placeOrderBtn = new System.Windows.Forms.Button();
+            this.menuBtn = new System.Windows.Forms.Button();
+            this.seeOrder = new System.Windows.Forms.Button();
+            this.orderListView = new System.Windows.Forms.ListView();
+            this.foodColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.drinkColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.addressColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.discountColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.deleteOrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.orderInputP.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
-            // menuBtn
+            // orderInputP
             // 
-            this.menuBtn.FlatAppearance.BorderSize = 0;
-            this.menuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.menuBtn.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.menuBtn.ForeColor = System.Drawing.Color.White;
-            this.menuBtn.Image = ((System.Drawing.Image)(resources.GetObject("menuBtn.Image")));
-            this.menuBtn.Location = new System.Drawing.Point(1, -1);
-            this.menuBtn.Name = "menuBtn";
-            this.menuBtn.Size = new System.Drawing.Size(196, 170);
-            this.menuBtn.TabIndex = 0;
-            this.menuBtn.Text = "Menu";
-            this.menuBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.menuBtn.UseMnemonic = false;
-            this.menuBtn.UseVisualStyleBackColor = false;
-            this.menuBtn.Click += new System.EventHandler(this.menuBtn_Click);
+            this.orderInputP.Controls.Add(this.orderListView);
+            this.orderInputP.Controls.Add(this.drinkChoice);
+            this.orderInputP.Controls.Add(this.textBox12);
+            this.orderInputP.Controls.Add(this.textBox2);
+            this.orderInputP.Controls.Add(this.menuChoice);
+            this.orderInputP.Controls.Add(this.address);
+            this.orderInputP.Controls.Add(this.textBox9);
+            this.orderInputP.Controls.Add(this.discount);
+            this.orderInputP.Controls.Add(this.textBox7);
+            this.orderInputP.Controls.Add(this.submitOrderBtn);
+            this.orderInputP.Location = new System.Drawing.Point(306, -1);
+            this.orderInputP.Name = "orderInputP";
+            this.orderInputP.Size = new System.Drawing.Size(421, 700);
+            this.orderInputP.TabIndex = 2;
+            this.orderInputP.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // drinkChoice
+            // 
+            this.drinkChoice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(36)))), ((int)(((byte)(56)))));
+            this.drinkChoice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.drinkChoice.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.drinkChoice.ForeColor = System.Drawing.Color.White;
+            this.drinkChoice.FormattingEnabled = true;
+            this.drinkChoice.Items.AddRange(new object[] {
+            "Water",
+            "Cola",
+            "Beer",
+            "OrangeJuice"});
+            this.drinkChoice.Location = new System.Drawing.Point(33, 188);
+            this.drinkChoice.Name = "drinkChoice";
+            this.drinkChoice.Size = new System.Drawing.Size(340, 31);
+            this.drinkChoice.TabIndex = 24;
+            // 
+            // textBox12
+            // 
+            this.textBox12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(36)))), ((int)(((byte)(56)))));
+            this.textBox12.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox12.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBox12.ForeColor = System.Drawing.Color.White;
+            this.textBox12.Location = new System.Drawing.Point(33, 157);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(340, 25);
+            this.textBox12.TabIndex = 23;
+            this.textBox12.Text = "Something to drink?";
+            // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(36)))), ((int)(((byte)(56)))));
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBox2.ForeColor = System.Drawing.Color.White;
+            this.textBox2.Location = new System.Drawing.Point(33, 57);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(340, 25);
+            this.textBox2.TabIndex = 0;
+            this.textBox2.Text = "Select your choice";
+            // 
+            // menuChoice
+            // 
+            this.menuChoice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(36)))), ((int)(((byte)(56)))));
+            this.menuChoice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.menuChoice.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuChoice.ForeColor = System.Drawing.Color.White;
+            this.menuChoice.FormattingEnabled = true;
+            this.menuChoice.Items.AddRange(new object[] {
+            "Chicken Burger",
+            "Pizza",
+            "Soup",
+            "Donuts"});
+            this.menuChoice.Location = new System.Drawing.Point(33, 88);
+            this.menuChoice.Name = "menuChoice";
+            this.menuChoice.Size = new System.Drawing.Size(340, 31);
+            this.menuChoice.TabIndex = 22;
+            // 
+            // address
+            // 
+            this.address.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(36)))), ((int)(((byte)(56)))));
+            this.address.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.address.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.address.ForeColor = System.Drawing.Color.White;
+            this.address.Location = new System.Drawing.Point(33, 255);
+            this.address.Name = "address";
+            this.address.Size = new System.Drawing.Size(340, 25);
+            this.address.TabIndex = 19;
+            this.address.Text = "Enter an address";
+            // 
+            // textBox9
+            // 
+            this.textBox9.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.textBox9.Location = new System.Drawing.Point(33, 286);
+            this.textBox9.Multiline = true;
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(340, 1);
+            this.textBox9.TabIndex = 18;
+            this.textBox9.Text = "Enter an address";
+            // 
+            // discount
+            // 
+            this.discount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(36)))), ((int)(((byte)(56)))));
+            this.discount.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.discount.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.discount.ForeColor = System.Drawing.Color.White;
+            this.discount.Location = new System.Drawing.Point(33, 337);
+            this.discount.Name = "discount";
+            this.discount.Size = new System.Drawing.Size(340, 25);
+            this.discount.TabIndex = 15;
+            this.discount.Text = "Discount Code";
+            // 
+            // textBox7
+            // 
+            this.textBox7.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.textBox7.Location = new System.Drawing.Point(33, 368);
+            this.textBox7.Multiline = true;
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(340, 1);
+            this.textBox7.TabIndex = 14;
+            // 
+            // submitOrderBtn
+            // 
+            this.submitOrderBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(94)))), ((int)(((byte)(113)))));
+            this.submitOrderBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.submitOrderBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.submitOrderBtn.ForeColor = System.Drawing.Color.White;
+            this.submitOrderBtn.Location = new System.Drawing.Point(33, 422);
+            this.submitOrderBtn.Name = "submitOrderBtn";
+            this.submitOrderBtn.Size = new System.Drawing.Size(177, 44);
+            this.submitOrderBtn.TabIndex = 0;
+            this.submitOrderBtn.Text = "Order Now";
+            this.submitOrderBtn.UseVisualStyleBackColor = false;
+            this.submitOrderBtn.Click += new System.EventHandler(this.button1_Click);
             // 
             // placeOrderBtn
             // 
@@ -83,177 +206,100 @@
             this.placeOrderBtn.UseVisualStyleBackColor = false;
             this.placeOrderBtn.Click += new System.EventHandler(this.placeOrderBtn_Click);
             // 
-            // orderInputP
+            // menuBtn
             // 
-            this.orderInputP.Controls.Add(this.comboBox1);
-            this.orderInputP.Controls.Add(this.textBox10);
-            this.orderInputP.Controls.Add(this.textBox11);
-            this.orderInputP.Controls.Add(this.textBox8);
-            this.orderInputP.Controls.Add(this.textBox9);
-            this.orderInputP.Controls.Add(this.textBox1);
-            this.orderInputP.Controls.Add(this.textBox5);
-            this.orderInputP.Controls.Add(this.textBox6);
-            this.orderInputP.Controls.Add(this.textBox7);
-            this.orderInputP.Controls.Add(this.textBox3);
-            this.orderInputP.Controls.Add(this.textBox4);
-            this.orderInputP.Controls.Add(this.foodChoice);
-            this.orderInputP.Controls.Add(this.textBox2);
-            this.orderInputP.Controls.Add(this.submitOrderBtn);
-            this.orderInputP.Location = new System.Drawing.Point(203, -1);
-            this.orderInputP.Name = "orderInputP";
-            this.orderInputP.Size = new System.Drawing.Size(721, 701);
-            this.orderInputP.TabIndex = 2;
-            this.orderInputP.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.menuBtn.FlatAppearance.BorderSize = 0;
+            this.menuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.menuBtn.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.menuBtn.ForeColor = System.Drawing.Color.White;
+            this.menuBtn.Image = ((System.Drawing.Image)(resources.GetObject("menuBtn.Image")));
+            this.menuBtn.Location = new System.Drawing.Point(1, -1);
+            this.menuBtn.Name = "menuBtn";
+            this.menuBtn.Size = new System.Drawing.Size(196, 170);
+            this.menuBtn.TabIndex = 0;
+            this.menuBtn.Text = "Menu";
+            this.menuBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.menuBtn.UseMnemonic = false;
+            this.menuBtn.UseVisualStyleBackColor = false;
+            this.menuBtn.Click += new System.EventHandler(this.menuBtn_Click);
             // 
-            // submitOrderBtn
+            // seeOrder
             // 
-            this.submitOrderBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(94)))), ((int)(((byte)(113)))));
-            this.submitOrderBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.submitOrderBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.submitOrderBtn.ForeColor = System.Drawing.Color.White;
-            this.submitOrderBtn.Location = new System.Drawing.Point(208, 596);
-            this.submitOrderBtn.Name = "submitOrderBtn";
-            this.submitOrderBtn.Size = new System.Drawing.Size(177, 44);
-            this.submitOrderBtn.TabIndex = 0;
-            this.submitOrderBtn.Text = "Order Now";
-            this.submitOrderBtn.UseVisualStyleBackColor = false;
-            this.submitOrderBtn.Click += new System.EventHandler(this.button1_Click);
+            this.seeOrder.FlatAppearance.BorderSize = 0;
+            this.seeOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.seeOrder.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.seeOrder.ForeColor = System.Drawing.Color.White;
+            this.seeOrder.Image = ((System.Drawing.Image)(resources.GetObject("seeOrder.Image")));
+            this.seeOrder.Location = new System.Drawing.Point(1, 351);
+            this.seeOrder.Name = "seeOrder";
+            this.seeOrder.Size = new System.Drawing.Size(196, 156);
+            this.seeOrder.TabIndex = 3;
+            this.seeOrder.Text = "View Order";
+            this.seeOrder.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.seeOrder.UseMnemonic = false;
+            this.seeOrder.UseVisualStyleBackColor = false;
+            this.seeOrder.Click += new System.EventHandler(this.seeOrder_Click);
             // 
-            // textBox3
+            // orderListView
             // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(36)))), ((int)(((byte)(56)))));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox3.ForeColor = System.Drawing.Color.White;
-            this.textBox3.Location = new System.Drawing.Point(208, 141);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(340, 25);
-            this.textBox3.TabIndex = 13;
-            this.textBox3.Text = "Anything to drink?";
+            this.orderListView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(36)))), ((int)(((byte)(56)))));
+            this.orderListView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.orderListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.foodColumn,
+            this.drinkColumn,
+            this.addressColumn,
+            this.discountColumn});
+            this.orderListView.ContextMenuStrip = this.contextMenuStrip1;
+            this.orderListView.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.orderListView.ForeColor = System.Drawing.Color.White;
+            this.orderListView.FullRowSelect = true;
+            this.orderListView.HideSelection = false;
+            this.orderListView.Location = new System.Drawing.Point(19, 523);
+            this.orderListView.Name = "orderListView";
+            this.orderListView.Size = new System.Drawing.Size(399, 135);
+            this.orderListView.TabIndex = 4;
+            this.orderListView.UseCompatibleStateImageBehavior = false;
+            this.orderListView.View = System.Windows.Forms.View.Details;
+            this.orderListView.SelectedIndexChanged += new System.EventHandler(this.orderListView_SelectedIndexChanged);
             // 
-            // textBox4
+            // foodColumn
             // 
-            this.textBox4.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.textBox4.Location = new System.Drawing.Point(208, 172);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(340, 1);
-            this.textBox4.TabIndex = 12;
+            this.foodColumn.Text = "Food";
+            this.foodColumn.Width = 66;
             // 
-            // foodChoice
+            // drinkColumn
             // 
-            this.foodChoice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(36)))), ((int)(((byte)(56)))));
-            this.foodChoice.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.foodChoice.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.foodChoice.ForeColor = System.Drawing.Color.White;
-            this.foodChoice.Location = new System.Drawing.Point(208, 48);
-            this.foodChoice.Name = "foodChoice";
-            this.foodChoice.Size = new System.Drawing.Size(340, 25);
-            this.foodChoice.TabIndex = 11;
-            this.foodChoice.Text = "Enter your choice";
+            this.drinkColumn.Text = "Drink";
+            this.drinkColumn.Width = 61;
             // 
-            // textBox2
+            // addressColumn
             // 
-            this.textBox2.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.textBox2.Location = new System.Drawing.Point(208, 79);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(340, 1);
-            this.textBox2.TabIndex = 10;
+            this.addressColumn.Text = "Address";
+            this.addressColumn.Width = 93;
             // 
-            // textBox1
+            // discountColumn
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(36)))), ((int)(((byte)(56)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(208, 329);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(340, 25);
-            this.textBox1.TabIndex = 17;
-            this.textBox1.Text = "Anything to drink?";
+            this.discountColumn.Text = "Discount";
+            this.discountColumn.Width = 141;
             // 
-            // textBox5
+            // contextMenuStrip1
             // 
-            this.textBox5.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.textBox5.Location = new System.Drawing.Point(208, 360);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(340, 1);
-            this.textBox5.TabIndex = 16;
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.deleteOrderToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(165, 28);
             // 
-            // textBox6
+            // deleteOrderToolStripMenuItem
             // 
-            this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(36)))), ((int)(((byte)(56)))));
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox6.ForeColor = System.Drawing.Color.White;
-            this.textBox6.Location = new System.Drawing.Point(208, 503);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(340, 25);
-            this.textBox6.TabIndex = 15;
-            this.textBox6.Text = "Discount Code";
+            this.deleteOrderToolStripMenuItem.Name = "deleteOrderToolStripMenuItem";
+            this.deleteOrderToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.deleteOrderToolStripMenuItem.Text = "Delete Order";
+            this.deleteOrderToolStripMenuItem.Click += new System.EventHandler(this.deleteOrderToolStripMenuItem_Click);
             // 
-            // textBox7
+            // errorProvider1
             // 
-            this.textBox7.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.textBox7.Location = new System.Drawing.Point(208, 534);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(340, 1);
-            this.textBox7.TabIndex = 14;
-            // 
-            // textBox8
-            // 
-            this.textBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(36)))), ((int)(((byte)(56)))));
-            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox8.ForeColor = System.Drawing.Color.White;
-            this.textBox8.Location = new System.Drawing.Point(208, 421);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(340, 25);
-            this.textBox8.TabIndex = 19;
-            this.textBox8.Text = "Enter an address";
-            // 
-            // textBox9
-            // 
-            this.textBox9.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.textBox9.Location = new System.Drawing.Point(208, 452);
-            this.textBox9.Multiline = true;
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(340, 1);
-            this.textBox9.TabIndex = 18;
-            this.textBox9.Text = "Enter an address";
-            // 
-            // textBox10
-            // 
-            this.textBox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(36)))), ((int)(((byte)(56)))));
-            this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox10.ForeColor = System.Drawing.Color.White;
-            this.textBox10.Location = new System.Drawing.Point(208, 239);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(340, 25);
-            this.textBox10.TabIndex = 21;
-            this.textBox10.Text = "ASAP or specified time?";
-            // 
-            // textBox11
-            // 
-            this.textBox11.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.textBox11.Location = new System.Drawing.Point(208, 270);
-            this.textBox11.Multiline = true;
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(340, 1);
-            this.textBox11.TabIndex = 20;
-            this.textBox11.Text = "Enter an address";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(208, 97);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(340, 24);
-            this.comboBox1.TabIndex = 22;
+            this.errorProvider1.ContainerControl = this;
             // 
             // orderForm
             // 
@@ -261,6 +307,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(36)))), ((int)(((byte)(56)))));
             this.ClientSize = new System.Drawing.Size(922, 703);
+            this.Controls.Add(this.seeOrder);
             this.Controls.Add(this.orderInputP);
             this.Controls.Add(this.placeOrderBtn);
             this.Controls.Add(this.menuBtn);
@@ -271,6 +318,8 @@
             this.Load += new System.EventHandler(this.orderForm_Load);
             this.orderInputP.ResumeLayout(false);
             this.orderInputP.PerformLayout();
+            this.contextMenuStrip1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -281,18 +330,22 @@
         private System.Windows.Forms.Button placeOrderBtn;
         private System.Windows.Forms.Panel orderInputP;
         private System.Windows.Forms.Button submitOrderBtn;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox discount;
         private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox foodChoice;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox address;
         private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox menuChoice;
+        private System.Windows.Forms.ComboBox drinkChoice;
+        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.ListView orderListView;
+        private System.Windows.Forms.ColumnHeader foodColumn;
+        private System.Windows.Forms.ColumnHeader drinkColumn;
+        private System.Windows.Forms.ColumnHeader addressColumn;
+        private System.Windows.Forms.ColumnHeader discountColumn;
+        private System.Windows.Forms.Button seeOrder;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem deleteOrderToolStripMenuItem;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
