@@ -205,6 +205,7 @@
             this.reservationBtn.Text = "Reservation";
             this.reservationBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.reservationBtn.UseVisualStyleBackColor = false;
+            this.reservationBtn.Click += new System.EventHandler(this.reservationBtn_Click_1);
             // 
             // reviewBtn
             // 
@@ -252,6 +253,7 @@
             this.pContainer.Name = "pContainer";
             this.pContainer.Size = new System.Drawing.Size(1035, 747);
             this.pContainer.TabIndex = 19;
+            this.pContainer.Paint += new System.Windows.Forms.PaintEventHandler(this.pContainer_Paint);
             // 
             // Client
             // 

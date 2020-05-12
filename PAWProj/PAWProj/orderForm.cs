@@ -38,36 +38,59 @@ namespace PAWProj
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(menuChoice.Text == "")
+            bool isValid = true;
+            if (menuChoice.Text == "")
             {
-                errorProvider1.SetError(menuChoice, "Please select your choice");
-                //labelName.Text = "Please select your choice";
-                //labelName.Enable = true;
+                errorProvider1.SetError(menuChoice, "Please select your choice!");
+                isValid = false;
             }
-            try
-            {
-                string choice = menuChoice.Text;
-                string drink = drinkChoice.Text;
-                string add = address.Text;
-                string promotional = discount.Text;
 
-                Order o = new Order(choice, drink, add, promotional);
-                orders.Add(o);
+            if (drinkChoice.Text == "")
+            {
+                errorProvider1.SetError(drinkChoice, "Please provide a drink choice!");
+                isValid = false;
+            }
 
-                ListViewItem itm = new ListViewItem(o.FoodName);
-                itm.SubItems.Add(o.DrinkName);
-                itm.SubItems.Add(o.Address);
-                itm.SubItems.Add(o.Code);
-                orderListView.Items.Add(itm);
-            } catch(Exception ex)
+            if(address.Text == "" || address.Text == "Enter an address")
             {
-                MessageBox.Show(ex.Message);
-            } finally
+                errorProvider1.SetError(address, "Please provide an address!");
+                isValid = false;
+            }
+
+            if(discount.Text != "PROMO2020")
             {
-                menuChoice.Text = "";
-                drinkChoice.Text = "";
-                address.Clear();
-                discount.Clear();
+                errorProvider1.SetError(discount, "The discount isn't available!");
+                isValid = false;
+            }
+            if (isValid)
+            {
+                try
+                {
+                    string choice = menuChoice.Text;
+                    string drink = drinkChoice.Text;
+                    string add = address.Text;
+                    string promotional = discount.Text;
+
+                    Order o = new Order(choice, drink, add, promotional);
+                    orders.Add(o);
+
+                    ListViewItem itm = new ListViewItem(o.FoodName);
+                    itm.SubItems.Add(o.DrinkName);
+                    itm.SubItems.Add(o.Address);
+                    itm.SubItems.Add(o.Code);
+                    orderListView.Items.Add(itm);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    menuChoice.Text = "";
+                    drinkChoice.Text = "";
+                    address.Clear();
+                    discount.Clear();
+                }
             }
             
 
@@ -86,7 +109,7 @@ namespace PAWProj
 
         private void seeOrder_Click(object sender, EventArgs e)
         {
-
+            orderInputP.Hide();
             orderListView.Show();           
 
         }

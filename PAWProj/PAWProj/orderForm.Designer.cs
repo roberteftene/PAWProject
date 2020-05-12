@@ -40,9 +40,6 @@
             this.discount = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.submitOrderBtn = new System.Windows.Forms.Button();
-            this.placeOrderBtn = new System.Windows.Forms.Button();
-            this.menuBtn = new System.Windows.Forms.Button();
-            this.seeOrder = new System.Windows.Forms.Button();
             this.orderListView = new System.Windows.Forms.ListView();
             this.foodColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.drinkColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -50,6 +47,9 @@
             this.discountColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.deleteOrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.placeOrderBtn = new System.Windows.Forms.Button();
+            this.menuBtn = new System.Windows.Forms.Button();
+            this.seeOrder = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.orderInputP.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
@@ -58,7 +58,6 @@
             // 
             // orderInputP
             // 
-            this.orderInputP.Controls.Add(this.orderListView);
             this.orderInputP.Controls.Add(this.drinkChoice);
             this.orderInputP.Controls.Add(this.textBox12);
             this.orderInputP.Controls.Add(this.textBox2);
@@ -68,9 +67,9 @@
             this.orderInputP.Controls.Add(this.discount);
             this.orderInputP.Controls.Add(this.textBox7);
             this.orderInputP.Controls.Add(this.submitOrderBtn);
-            this.orderInputP.Location = new System.Drawing.Point(306, -1);
+            this.orderInputP.Location = new System.Drawing.Point(344, 14);
             this.orderInputP.Name = "orderInputP";
-            this.orderInputP.Size = new System.Drawing.Size(421, 700);
+            this.orderInputP.Size = new System.Drawing.Size(421, 677);
             this.orderInputP.TabIndex = 2;
             this.orderInputP.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -189,6 +188,63 @@
             this.submitOrderBtn.UseVisualStyleBackColor = false;
             this.submitOrderBtn.Click += new System.EventHandler(this.button1_Click);
             // 
+            // orderListView
+            // 
+            this.orderListView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(36)))), ((int)(((byte)(56)))));
+            this.orderListView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.orderListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.foodColumn,
+            this.drinkColumn,
+            this.addressColumn,
+            this.discountColumn});
+            this.orderListView.ContextMenuStrip = this.contextMenuStrip1;
+            this.orderListView.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.orderListView.ForeColor = System.Drawing.Color.White;
+            this.orderListView.FullRowSelect = true;
+            this.orderListView.HideSelection = false;
+            this.orderListView.Location = new System.Drawing.Point(218, -1);
+            this.orderListView.Name = "orderListView";
+            this.orderListView.Size = new System.Drawing.Size(670, 135);
+            this.orderListView.TabIndex = 4;
+            this.orderListView.UseCompatibleStateImageBehavior = false;
+            this.orderListView.View = System.Windows.Forms.View.Details;
+            this.orderListView.SelectedIndexChanged += new System.EventHandler(this.orderListView_SelectedIndexChanged);
+            // 
+            // foodColumn
+            // 
+            this.foodColumn.Text = "Food";
+            this.foodColumn.Width = 109;
+            // 
+            // drinkColumn
+            // 
+            this.drinkColumn.Text = "Drink";
+            this.drinkColumn.Width = 114;
+            // 
+            // addressColumn
+            // 
+            this.addressColumn.Text = "Address";
+            this.addressColumn.Width = 148;
+            // 
+            // discountColumn
+            // 
+            this.discountColumn.Text = "Discount";
+            this.discountColumn.Width = 189;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.deleteOrderToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(165, 28);
+            // 
+            // deleteOrderToolStripMenuItem
+            // 
+            this.deleteOrderToolStripMenuItem.Name = "deleteOrderToolStripMenuItem";
+            this.deleteOrderToolStripMenuItem.Size = new System.Drawing.Size(164, 24);
+            this.deleteOrderToolStripMenuItem.Text = "Delete Order";
+            this.deleteOrderToolStripMenuItem.Click += new System.EventHandler(this.deleteOrderToolStripMenuItem_Click);
+            // 
             // placeOrderBtn
             // 
             this.placeOrderBtn.FlatAppearance.BorderSize = 0;
@@ -240,63 +296,6 @@
             this.seeOrder.UseVisualStyleBackColor = false;
             this.seeOrder.Click += new System.EventHandler(this.seeOrder_Click);
             // 
-            // orderListView
-            // 
-            this.orderListView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(36)))), ((int)(((byte)(56)))));
-            this.orderListView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.orderListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.foodColumn,
-            this.drinkColumn,
-            this.addressColumn,
-            this.discountColumn});
-            this.orderListView.ContextMenuStrip = this.contextMenuStrip1;
-            this.orderListView.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.orderListView.ForeColor = System.Drawing.Color.White;
-            this.orderListView.FullRowSelect = true;
-            this.orderListView.HideSelection = false;
-            this.orderListView.Location = new System.Drawing.Point(19, 523);
-            this.orderListView.Name = "orderListView";
-            this.orderListView.Size = new System.Drawing.Size(399, 135);
-            this.orderListView.TabIndex = 4;
-            this.orderListView.UseCompatibleStateImageBehavior = false;
-            this.orderListView.View = System.Windows.Forms.View.Details;
-            this.orderListView.SelectedIndexChanged += new System.EventHandler(this.orderListView_SelectedIndexChanged);
-            // 
-            // foodColumn
-            // 
-            this.foodColumn.Text = "Food";
-            this.foodColumn.Width = 66;
-            // 
-            // drinkColumn
-            // 
-            this.drinkColumn.Text = "Drink";
-            this.drinkColumn.Width = 61;
-            // 
-            // addressColumn
-            // 
-            this.addressColumn.Text = "Address";
-            this.addressColumn.Width = 93;
-            // 
-            // discountColumn
-            // 
-            this.discountColumn.Text = "Discount";
-            this.discountColumn.Width = 141;
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.deleteOrderToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(165, 28);
-            // 
-            // deleteOrderToolStripMenuItem
-            // 
-            this.deleteOrderToolStripMenuItem.Name = "deleteOrderToolStripMenuItem";
-            this.deleteOrderToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
-            this.deleteOrderToolStripMenuItem.Text = "Delete Order";
-            this.deleteOrderToolStripMenuItem.Click += new System.EventHandler(this.deleteOrderToolStripMenuItem_Click);
-            // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
@@ -307,10 +306,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(36)))), ((int)(((byte)(56)))));
             this.ClientSize = new System.Drawing.Size(922, 703);
+            this.Controls.Add(this.orderListView);
             this.Controls.Add(this.seeOrder);
-            this.Controls.Add(this.orderInputP);
             this.Controls.Add(this.placeOrderBtn);
             this.Controls.Add(this.menuBtn);
+            this.Controls.Add(this.orderInputP);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "orderForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

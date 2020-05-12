@@ -12,6 +12,10 @@ namespace PAWProj
 {
     public partial class Client : Form
     {
+        orderForm orderMethodsForm = new orderForm() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+        reservationForm reservationMethodsForm = new reservationForm() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+
+
         public Client()
         {
             InitializeComponent();
@@ -35,10 +39,9 @@ namespace PAWProj
 
         private void getOrdersButton_Click(object sender, EventArgs e)
         {
-            orderForm newForm = new orderForm() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            //newForm.FormBorderStyle = { FormBorderStyle}cbo
-            this.pContainer.Controls.Add(newForm);
-            newForm.Show();
+            reservationMethodsForm.Hide();
+            this.pContainer.Controls.Add(orderMethodsForm);
+            orderMethodsForm.Show();
         }
 
         private void time_Click(object sender, EventArgs e)
@@ -82,6 +85,26 @@ namespace PAWProj
         private void reviewBtn_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void pContainer_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        //private void reservationBtn_Click(object sender, EventArgs e)
+        //{
+        //    //reservationForm newForm = new orderFo() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+        //    ////newForm.FormBorderStyle = { FormBorderStyle}cbo
+        //    //this.pContainer.Controls.Add(newForm);
+        //    //newForm.Show();
+        //}
+
+        private void reservationBtn_Click_1(object sender, EventArgs e)
+        {
+            orderMethodsForm.Hide();
+            this.pContainer.Controls.Add(reservationMethodsForm);
+            reservationMethodsForm.Show();
         }
     }
 }
