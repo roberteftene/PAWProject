@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddWaiter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddWaiter.Designer.cs">
+      <DependentUpon>AddWaiter.cs</DependentUpon>
+    </Compile>
     <Compile Include="Client.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +99,9 @@
       <DependentUpon>reservationForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Waiter.cs" />
+    <EmbeddedResource Include="AddWaiter.resx">
+      <DependentUpon>AddWaiter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Client.resx">
       <DependentUpon>Client.cs</DependentUpon>
     </EmbeddedResource>

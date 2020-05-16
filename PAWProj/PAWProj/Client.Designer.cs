@@ -105,6 +105,7 @@
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(1896, 58);
             this.textBox1.TabIndex = 13;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
@@ -249,7 +250,7 @@
             // 
             // pContainer
             // 
-            this.pContainer.Location = new System.Drawing.Point(265, 55);
+            this.pContainer.Location = new System.Drawing.Point(262, 55);
             this.pContainer.Name = "pContainer";
             this.pContainer.Size = new System.Drawing.Size(1035, 747);
             this.pContainer.TabIndex = 19;
