@@ -47,7 +47,7 @@
             this.loginClientBtn.Name = "loginClientBtn";
             this.loginClientBtn.Size = new System.Drawing.Size(203, 76);
             this.loginClientBtn.TabIndex = 5;
-            this.loginClientBtn.Text = "Conectează-te!";
+            this.loginClientBtn.Text = "Login";
             this.loginClientBtn.UseVisualStyleBackColor = false;
             this.loginClientBtn.Click += new System.EventHandler(this.loginClientBtn_Click);
             // 

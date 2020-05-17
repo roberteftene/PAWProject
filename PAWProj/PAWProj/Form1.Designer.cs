@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.clientButton = new System.Windows.Forms.Button();
             this.waiterButton = new System.Windows.Forms.Button();
@@ -36,8 +37,14 @@
             this.btn_minimize = new System.Windows.Forms.Button();
             this.btn_maximize = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.MainMenu = new System.Windows.Forms.MenuStrip();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.minimizeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.maximizeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.employee_usercontrol1 = new PAWProj.employee_usercontrol();
             this.clientlogin_usercontrol1 = new PAWProj.clientlogin_usercontrol();
+            this.MainMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // clientButton
@@ -106,7 +113,7 @@
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(63)))), ((int)(((byte)(83)))));
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.textBox1.Location = new System.Drawing.Point(-4, -14);
+            this.textBox1.Location = new System.Drawing.Point(0, -5);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
@@ -122,7 +129,7 @@
             this.btn_minimize.ForeColor = System.Drawing.Color.Yellow;
             this.btn_minimize.Image = ((System.Drawing.Image)(resources.GetObject("btn_minimize.Image")));
             this.btn_minimize.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btn_minimize.Location = new System.Drawing.Point(914, 4);
+            this.btn_minimize.Location = new System.Drawing.Point(914, 12);
             this.btn_minimize.Name = "btn_minimize";
             this.btn_minimize.Size = new System.Drawing.Size(36, 40);
             this.btn_minimize.TabIndex = 10;
@@ -139,7 +146,7 @@
             this.btn_maximize.ForeColor = System.Drawing.Color.Yellow;
             this.btn_maximize.Image = ((System.Drawing.Image)(resources.GetObject("btn_maximize.Image")));
             this.btn_maximize.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btn_maximize.Location = new System.Drawing.Point(976, 4);
+            this.btn_maximize.Location = new System.Drawing.Point(970, 12);
             this.btn_maximize.Name = "btn_maximize";
             this.btn_maximize.Size = new System.Drawing.Size(36, 40);
             this.btn_maximize.TabIndex = 11;
@@ -156,7 +163,7 @@
             this.button1.ForeColor = System.Drawing.Color.Yellow;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button1.Location = new System.Drawing.Point(1031, 4);
+            this.button1.Location = new System.Drawing.Point(1031, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(36, 40);
             this.button1.TabIndex = 12;
@@ -164,10 +171,52 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // MainMenu
+            // 
+            this.MainMenu.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.MainMenu.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MainMenu.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.MainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1,
+            this.minimizeToolStripMenuItem,
+            this.maximizeToolStripMenuItem});
+            this.MainMenu.Location = new System.Drawing.Point(0, 663);
+            this.MainMenu.Name = "MainMenu";
+            this.MainMenu.Size = new System.Drawing.Size(1079, 28);
+            this.MainMenu.TabIndex = 14;
+            this.MainMenu.Text = "menuStrip1";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(44, 24);
+            this.toolStripMenuItem1.Text = "Exit";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // minimizeToolStripMenuItem
+            // 
+            this.minimizeToolStripMenuItem.Name = "minimizeToolStripMenuItem";
+            this.minimizeToolStripMenuItem.Size = new System.Drawing.Size(83, 24);
+            this.minimizeToolStripMenuItem.Text = "Minimize";
+            this.minimizeToolStripMenuItem.Click += new System.EventHandler(this.btn_minimize_Click);
+            // 
+            // maximizeToolStripMenuItem
+            // 
+            this.maximizeToolStripMenuItem.Name = "maximizeToolStripMenuItem";
+            this.maximizeToolStripMenuItem.Size = new System.Drawing.Size(88, 24);
+            this.maximizeToolStripMenuItem.Text = "Maximize";
+            this.maximizeToolStripMenuItem.Click += new System.EventHandler(this.btn_maximize_Click);
+            // 
             // employee_usercontrol1
             // 
             this.employee_usercontrol1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(36)))), ((int)(((byte)(56)))));
-            this.employee_usercontrol1.Location = new System.Drawing.Point(562, 129);
+            this.employee_usercontrol1.Location = new System.Drawing.Point(549, 156);
             this.employee_usercontrol1.Name = "employee_usercontrol1";
             this.employee_usercontrol1.Size = new System.Drawing.Size(417, 339);
             this.employee_usercontrol1.TabIndex = 13;
@@ -192,18 +241,22 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_maximize);
             this.Controls.Add(this.btn_minimize);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.clientlogin_usercontrol1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.waiterButton);
             this.Controls.Add(this.clientButton);
+            this.Controls.Add(this.MainMenu);
+            this.Controls.Add(this.textBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
+            this.MainMenuStrip = this.MainMenu;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.MainMenu.ResumeLayout(false);
+            this.MainMenu.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -219,6 +272,11 @@
         private System.Windows.Forms.Button btn_maximize;
         private System.Windows.Forms.Button button1;
         private employee_usercontrol employee_usercontrol1;
+        private System.Windows.Forms.MenuStrip MainMenu;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem minimizeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem maximizeToolStripMenuItem;
     }
 }
 
