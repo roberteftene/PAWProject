@@ -41,7 +41,6 @@
             this.btn_maximize = new System.Windows.Forms.Button();
             this.btn_minimize = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.importCVBtn = new System.Windows.Forms.Button();
             this.waiterInputP = new System.Windows.Forms.Panel();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.experienceInput = new System.Windows.Forms.TextBox();
@@ -57,7 +56,6 @@
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.button2 = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
             this.FirstName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.LastName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -243,26 +241,6 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.time_Click);
             // 
-            // importCVBtn
-            // 
-            this.importCVBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(94)))), ((int)(((byte)(113)))));
-            this.importCVBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
-            this.importCVBtn.FlatAppearance.BorderSize = 0;
-            this.importCVBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(63)))), ((int)(((byte)(83)))));
-            this.importCVBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
-            this.importCVBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.importCVBtn.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.importCVBtn.ForeColor = System.Drawing.Color.White;
-            this.importCVBtn.Image = ((System.Drawing.Image)(resources.GetObject("importCVBtn.Image")));
-            this.importCVBtn.Location = new System.Drawing.Point(-3, 382);
-            this.importCVBtn.Name = "importCVBtn";
-            this.importCVBtn.Size = new System.Drawing.Size(259, 145);
-            this.importCVBtn.TabIndex = 22;
-            this.importCVBtn.Text = "Import Waiter CV";
-            this.importCVBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.importCVBtn.UseVisualStyleBackColor = false;
-            this.importCVBtn.Click += new System.EventHandler(this.importCVBtn_Click);
-            // 
             // waiterInputP
             // 
             this.waiterInputP.Controls.Add(this.textBox3);
@@ -437,26 +415,6 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(94)))), ((int)(((byte)(113)))));
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(63)))), ((int)(((byte)(83)))));
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(-3, 533);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(263, 144);
-            this.button2.TabIndex = 29;
-            this.button2.Text = "Export Waiter CV";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // listView1
             // 
             this.listView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(36)))), ((int)(((byte)(56)))));
@@ -578,9 +536,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.listView1);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.waiterInputP);
-            this.Controls.Add(this.importCVBtn);
             this.Controls.Add(this.logoutBtn);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.btn_maximize);
@@ -619,7 +575,6 @@
         private System.Windows.Forms.Button btn_maximize;
         private System.Windows.Forms.Button btn_minimize;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Button importCVBtn;
         private System.Windows.Forms.Panel waiterInputP;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox experienceInput;
@@ -635,7 +590,6 @@
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ErrorProvider errorProvider1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColumnHeader FirstName;
         private System.Windows.Forms.ColumnHeader LastName;
