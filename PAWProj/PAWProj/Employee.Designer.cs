@@ -71,6 +71,7 @@
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.clock = new System.Windows.Forms.ToolStripLabel();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.waiterInputP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -470,7 +471,7 @@
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(313, 109);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(489, 97);
+            this.listView1.Size = new System.Drawing.Size(623, 341);
             this.listView1.TabIndex = 31;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -533,12 +534,14 @@
             this.importCVToolStripMenuItem.Name = "importCVToolStripMenuItem";
             this.importCVToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.importCVToolStripMenuItem.Text = "Import CV";
+            this.importCVToolStripMenuItem.Click += new System.EventHandler(this.importCVToolStripMenuItem_Click);
             // 
             // exportCVToolStripMenuItem
             // 
             this.exportCVToolStripMenuItem.Name = "exportCVToolStripMenuItem";
             this.exportCVToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.exportCVToolStripMenuItem.Text = "Export CV";
+            this.exportCVToolStripMenuItem.Click += new System.EventHandler(this.exportCVToolStripMenuItem_Click);
             // 
             // toolStripButton1
             // 
@@ -561,6 +564,10 @@
             // 
             this.timer2.Enabled = true;
             this.timer2.Tick += new System.EventHandler(this.toolStripLabel2_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // Employee
             // 
@@ -642,5 +649,6 @@
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripLabel clock;
         private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

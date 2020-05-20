@@ -34,6 +34,7 @@ namespace PAWProj
             timer1.Start();
             timer2.Start();
             label2.Text = DateTime.Now.ToShortDateString();
+            
         }
 
         private void getOrdersButton_Click(object sender, EventArgs e)
@@ -86,6 +87,16 @@ namespace PAWProj
 
         private void viewOrdersBtn_Click(object sender, EventArgs e)
         {
+            if(listView1.Items.Count == 0) { 
+            foreach (Waiter w in waiters)
+            {
+                ListViewItem itm = new ListViewItem(w.FirstName);
+                itm.SubItems.Add(w.LastName);
+                itm.SubItems.Add(w.Age.ToString());
+                itm.SubItems.Add(w.Experience);
+                listView1.Items.Add(itm);
+            }
+            }
             this.waiterInputP.Hide();
             this.listView1.Show();
             
@@ -132,12 +143,6 @@ namespace PAWProj
                     string experience = experienceInput.Text;
 
                     Waiter w = new Waiter(firstName, lastName, age, experience);
-
-                    ListViewItem itm = new ListViewItem(w.FirstName);
-                    itm.SubItems.Add(w.LastName);
-                    itm.SubItems.Add(w.Age.ToString());
-                    itm.SubItems.Add(w.Experience);
-                    listView1.Items.Add(itm);
 
 
                     formatter.Serialize(stream, w);
@@ -290,6 +295,54 @@ namespace PAWProj
         private void timer2_Tick(object sender, EventArgs e)
         {
             //time.Text = DateTime.Now.ToLongTimeString();
+        }
+
+        private void exportCVToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+            saveFileDialog1.Filter = "(*.txt)|*.txt";
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                StreamWriter sw = new StreamWriter(saveFileDialog1.FileName);
+                foreach (Waiter m in waiters)
+                {
+                    sw.WriteLine(m.ToStringText());
+                }
+
+                sw.Close();
+            }
+
+        }
+
+        private void importCVToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.Filter = "(*.txt)|*.txt";
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                StreamReader sr = new StreamReader(openFileDialog1.FileName);
+                string linie = null;
+                try
+                {
+                    while ((linie = sr.ReadLine()) != null)
+                    {
+                        string[] elements = linie.Split(',');
+                        string firstName = elements[0];
+                        string lastName = elements[1];
+                        int age = Convert.ToInt32(elements[2]);
+                        string exp = elements[3];
+                        
+                        Waiter m = new Waiter(firstName, lastName, age,exp);
+                        waiters.Add(m);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+
+                }
+
+                sr.Close();
+            }
         }
     }
 }

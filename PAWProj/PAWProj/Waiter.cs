@@ -58,5 +58,12 @@ namespace PAWProj
             return toPrint;
         }
 
+        public string ToStringText()
+        {
+            string toPrint = null;
+            toPrint += this.firstName + "," + this.lastName + "," + this.age + "," + this.experince;
+            return toPrint;
+        }
+
     }
 }
